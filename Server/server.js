@@ -7,7 +7,7 @@ var app = express();
 
 // var oauth = new oauthServer({ model: {} });
 // var io = require("socket.io")(app);
-app.use(express.static(__dirname + '/build'));
+// app.use(express.static(__dirname + '/build'));
 // app.use(oauth.authenticate());
 app.use(bodyParser.json());
 
@@ -24,7 +24,7 @@ function handleError(res, error, message, code) {
 };
 
 //GETS TASKS
-app.get('/index.html', function(req, res) {
+app.get('/tasks', function(req, res) {
 	db.collection('tasks').find({}).toArray(function(err, data) {
 		err ? handleError(res, err.message, 'Failed to get tasks') : res.status(200).json(data);
 	})
@@ -58,6 +58,19 @@ app.post('/tasks', function(req, res) {
 // 	})
 // })
 
+//   CLIENT SIDE
+// <script src="socket.io"></script>
+
+// var socket = io();
+
+// $('input').submit(function() {
+// 	socket.emit('tasks', ##input submission## );
+// 	##POST REQUEST##
+// });
+
+// socket.on('tasks', function(task) {
+// 	##GET REQUEST##
+// });
 
 
 
