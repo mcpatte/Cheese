@@ -1,12 +1,12 @@
 import React from 'react';
 import TaskCard from './TaskCard';
 
-const TaskStatusColumn = ({
-  task
-}) => {
+const TaskStatusColumn = ({tasks}) => {
   return (
     <div className="task-column">
-      <TaskCard task={task} />
+      {tasks.map((task, index) =>
+        <TaskCard task={task} key={index} />
+      )}
     </div>
   );
 };
