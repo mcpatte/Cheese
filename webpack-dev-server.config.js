@@ -9,11 +9,11 @@ const config = {
   entry: [
     'webpack/hot/dev-server',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, '/client/containers/app.js'),
+    path.join(__dirname, 'build/app.js'),
   ],
   // Server Configuration options
   devServer: {
-    contentBase: 'Client/static', // Relative directory for base of server
+    contentBase: 'public/static', // Relative directory for base of server
     devtool: 'eval',
     hot: true, // Live-reload
     inline: true,
@@ -33,7 +33,7 @@ const config = {
     // Moves files
     new TransferWebpackPlugin([
       {from: 'static'},
-    ], path.resolve(__dirname, 'Client')),
+    ], path.resolve(__dirname, 'public')),
   ],
   module: {
     loaders: [

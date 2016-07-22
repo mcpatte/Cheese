@@ -53,11 +53,11 @@ const task = {
 }
 
 
-App.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  isFetching: PropTypes.bool.isRequired,
-  tasks: PropTypes.array.isRequired
-}
+// App.propTypes = {
+//   dispatch: PropTypes.func.isRequired,
+//   isFetching: PropTypes.bool.isRequired,
+//   tasks: PropTypes.array.isRequired
+// }
 
 // function mapStateToProps(state) {
 //   const { } = state
@@ -69,6 +69,6 @@ App.propTypes = {
 // }
 
 
-export default connect(mapStateToProps)(App)
+// export default connect(mapStateToProps)(App)
 
 render(<Tasks task={task} />, document.getElementById('app'));
