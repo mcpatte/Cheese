@@ -4,31 +4,57 @@ import {render} from 'react-dom';
 //actions
 //components
 import Tasks from '../components/Tasks.js';
+import Navbar from '../components/Navbar.js';
+
+//socketio stuff
 
 
-// class App extends Component {
-//   constructor(props) {
-//     super(props)
+class App extends Component {
+  constructor(props) {
+    super(props)
 
-//   }
+  }
 
-//   componentDidMount() {
-//     const { dispatch } = this.props
-//     dispatch(/*get cards action*/)
-//   }
+  componentWillMount() {
 
-//   componentWillReceiveProps(nextProps) {
+  }
 
+  componentDidMount() {
+    //
+  }
 
-//   }
-
-//   render() {
+  componentWillReceiveProps(nextProps) {
 
 
-//   }
+  }
+
+  requestTasks() {
+
+  }
+
+  addTask() {
+
+  }
+
+  modifyTask() {
+
+  }
 
 
-// }
+  render() {
+
+    //render navbar
+
+    return (
+
+        <Tasks task={task} />
+
+    )
+
+  }
+
+
+}
 
 
 const task = {
@@ -69,6 +95,6 @@ const task = {
 // }
 
 
-// export default connect(mapStateToProps)(App)
+export default App
+// connect(mapStateToProps)(App)
 
-render(<Tasks task={task} />, document.getElementById('app'));
