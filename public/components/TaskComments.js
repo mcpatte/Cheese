@@ -13,8 +13,8 @@ const TaskComments = ({
       />
       <RaisedButton label="Submit comment" primary={true} />
       <ul className="comments-view">
-        {comments.map(comment =>
-          <li>
+        {comments.map((comment, index) =>
+          <li key={index}>
             <strong>{comment.user}:</strong> {comment.comment}
           </li>
         )}
