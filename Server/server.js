@@ -58,19 +58,6 @@ app.post('/tasks', function(req, res) {
 // 	})
 // })
 
-//   CLIENT SIDE
-// <script src="socket.io"></script>
-
-// var socket = io();
-
-// $('input').submit(function() {
-// 	socket.emit('tasks', ##input submission## );
-// 	##POST REQUEST##
-// });
-
-// socket.on('tasks', function(task) {
-// 	##GET REQUEST##
-// });
 
 
 
