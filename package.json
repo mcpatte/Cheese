@@ -9,7 +9,8 @@
   "engines": "6.2.2",
   "main": "build/index.html",
   "scripts": {
-    "postinstall": "build",
+    "preinstall": "webpack --config webpack-production.config.js --progress --colors",
+    "postinstall": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
