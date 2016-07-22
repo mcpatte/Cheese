@@ -10,7 +10,7 @@
   "main": "build/index.html",
   "scripts": {
     "preinstall": "webpack --config webpack-production.config.js --progress --colors",
-    "postinstall": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
+    "postinstall": "webpack --config webpack-production.config.js --progress --colors && webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
