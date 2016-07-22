@@ -8,7 +8,7 @@
   },
   "engines": "6.2.2",
   "scripts": {
-    "postinstall": "webpack --config webpack-production.config.js --progress --colors",
+    "postinstall": "npm run build",
     "start": "node Server/server.js",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
