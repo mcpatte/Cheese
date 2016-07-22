@@ -9,7 +9,7 @@ const config = {
   entry: [
     'webpack/hot/dev-server',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, '/Client/containers/app.js'),
+    path.join(__dirname, '/client/containers/app.js'),
   ],
   // Server Configuration options
   devServer: {
