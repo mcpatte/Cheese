@@ -1,7 +1,4 @@
 {
   "presets": ["es2015", "react"]
-<<<<<<< b721a8773db65bd962fc605443a5c6df2dfca430
 }
-=======
-}
->>>>>>> update client
+

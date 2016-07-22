@@ -7,7 +7,7 @@ var app = express();
 
 // var oauth = new oauthServer({ model: {} });
 // var io = require("socket.io")(app);
-// //app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/build'));
 // app.use(oauth.authenticate());
 app.use(bodyParser.json());
 
@@ -58,6 +58,19 @@ app.post('/tasks', function(req, res) {
 // 	})
 // })
 
+//   CLIENT SIDE
+// <script src="socket.io"></script>
+
+// var socket = io();
+
+// $('input').submit(function() {
+// 	socket.emit('tasks', ##input submission## );
+// 	##POST REQUEST##
+// });
+
+// socket.on('tasks', function(task) {
+// 	##GET REQUEST##
+// });
 
 
 
