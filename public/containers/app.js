@@ -49,8 +49,10 @@ class App extends Component {
 
     return (
 
-        // <Navbar />
+
+        <Navbar />
         <Tasks task={task} />
+
 
     )
 
