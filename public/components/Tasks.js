@@ -134,18 +134,20 @@ class Tasks extends React.Component {
     ];
 
     function filterTasks(tasks) {
-      return tasks.reduce(function(a, b) {
-        if (b.status === "To Do") {
-          a.todos ? a.todos.push(b) : a.todos = [b];
-          return a
-        } else if (b.status === "In Progress") {
-          a.inProgress ? a.inProgress.push(b) : a.inProgress = [b];
-          return a
+      return tasks.reduce(function(memo, task) {
+        if (task.status === "To Do") {
+          memo.todos.push(task);
+        } else if (task.status === "In Progress") {
+          memo.inProgress.push(task)
         } else {
-          a.completed ? a.completed.push(b) : a.completed = [b];
-          return a
+          memo.completed.push(task)
         }
-      }, {});
+        return memo;
+      }, {
+        todos: [],
+        inProgress: [],
+        completed: []
+      });
     };
 
     const filteredTasks = filterTasks(tasks);
