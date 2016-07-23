@@ -1,43 +1,34 @@
-import React from 'react';
-import Paper from 'material-ui/Paper';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React from 'react'
+import {Fieldset, Field, createValue} from 'react-forms'
 
-import TaskInfo from './TaskInfo';
-import TaskNotes from './TaskNotes';
-import TaskComments from './TaskComments';
+class Form extends React.Component {
 
-import {grey800, grey400, blueGrey500} from 'material-ui/styles/colors';
-
-const muiTheme = getMuiTheme({
-  palette: {
-    textColor: grey800,
-    borderColor: grey400,
-    accent1Color: blueGrey500
+  constructor(props) {
+    super(props)
+    let formValue = createValue({
+      value: props.value,
+      onChange: this.onChange.bind(this)
+    })
+    this.state = {formValue}
   }
-});
 
+  onChange(formValue) {
+    this.setState({formValue})
+  }
 
-class AddTask extends React.Component {
   render() {
-    const {task} = this.props;
-    const cardContents = <div>
-                          <TaskInfo
-                            title={task.title}
-                            status={task.status}
-                            dueDate={task.dueDate}
-                            category={task.category}
-                            points={task.points} />
-                          <TaskComments comments={task.comments}/>
-                        </div>;
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
-        <Paper className="task-card-container"
-          zDepth={1}
-          children={cardContents} />
-      </MuiThemeProvider>
-    );
+      <Fieldset formValue={this.state.formValue}>
+        <Field select="firstName" label="First name" />
+        <Field select="lastName" label="Last name" />
+      </Fieldset>
+    )
   }
 }
 
-export default AddTask;
+import {render} from 'react-dom'
+
+// render(
+//   <Form value={{firstName: 'Michael', lastName: 'Jackson'}} />,
+//   document.getElementById('form')
+// )
