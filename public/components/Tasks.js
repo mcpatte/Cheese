@@ -1,8 +1,6 @@
 import React from 'react';
 import TaskStatusColumn from './TaskStatusColumn';
 
-
-
 class Tasks extends React.Component {
   render() {
     const tasks = [
@@ -156,9 +154,9 @@ class Tasks extends React.Component {
 
     return (
       <div className="task-container">
-        <TaskStatusColumn tasks={todos} />
-        <TaskStatusColumn tasks={inProgress} />
-        <TaskStatusColumn tasks={completed} />
+        <TaskStatusColumn tasks={todos} columnName="To-Dos" />
+        <TaskStatusColumn tasks={inProgress} columnName="In Progress" />
+        <TaskStatusColumn tasks={completed} columnName="Completed" />
       </div>
     );
   }
