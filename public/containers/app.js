@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import {render} from 'react-dom';
-//actions
+import { requestTasks } from '../actions'
 //components
 import Tasks from '../components/Tasks.js';
 import Navbar from '../components/Navbar.js';
@@ -20,7 +20,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //
+    const { dispatch } = this.props
+    dispatch(requestTasks())
   }
 
   componentWillReceiveProps(nextProps) {
