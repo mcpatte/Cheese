@@ -1,35 +1,37 @@
 import React, { Component, PropTypes } from 'react'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import {render} from 'react-dom';
-//actions
-//components
+import { fetchTasks } from '../actions'
+
 import Tasks from '../components/Tasks.js';
 import Navbar from '../components/Navbar.js';
-
-//socketio stuff
 
 
 class App extends Component {
   constructor(props) {
     super(props)
-
-  }
-
-  componentWillMount() {
+    this.requestTasks = this.requestTasks.bind(this)
 
   }
 
   componentDidMount() {
-    //
+    const { dispatch, selectedTask } = this.props
+    console.log('component did mount fired')
+    dispatch(fetchTasks(selectedTask))
+
   }
 
   componentWillReceiveProps(nextProps) {
-
+    const { dispatch, selectedTask } = nextProps
+    console.log('compont will receive props fired')
+    dispatch(fetchTasks())
 
   }
 
   requestTasks() {
-
+    const { dispatch, selectedTask } = this.props
+    dispatch(fetchTasks())
+    console.log('requestTask fired')
   }
 
   addTask() {
@@ -47,6 +49,7 @@ class App extends Component {
 
     return (
 
+        // <Navbar />
         <Tasks task={task} />
 
     )
@@ -79,22 +82,26 @@ const task = {
 }
 
 
+
 // App.propTypes = {
 //   dispatch: PropTypes.func.isRequired,
 //   isFetching: PropTypes.bool.isRequired,
 //   tasks: PropTypes.array.isRequired
 // }
 
-// function mapStateToProps(state) {
-//   const { } = state
-//   const {
-//     isFetching,
-//     lastUpdated,
-//     items: cards
-//   }
-// }
+function mapStateToProps(state) {
+  const { } = state
+  const {
+    isFetching,
+    lastUpdated,
+    data: tasks
+  } = {isFetching: true, data: []}
 
+  return {
+    tasks,
+    isFetching,
+    lastUpdated
+  }
+}
 
-export default App
-// connect(mapStateToProps)(App)
-
+export default connect(mapStateToProps)(App)
