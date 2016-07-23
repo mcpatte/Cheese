@@ -4,7 +4,15 @@ import {render} from 'react-dom';
 import { fetchTasks } from '../actions'
 
 import Tasks from '../components/Tasks.js';
+<<<<<<< 2e467290aea53b00165da3c03007ba32b0b80d7e
 import Navbar from '../components/Navbar.js';
+=======
+import Nav from '../components/Navbar.js';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+//socketio stuff
+>>>>>>> Feat-Nav_Bar_Renders
 
 
 class App extends Component {
@@ -45,17 +53,16 @@ class App extends Component {
 
   render() {
 
-    //render navbar
+
 
     return (
-
-
-        <Navbar />
-        <Tasks task={task} />
-
-
-    )
-
+        <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+          <div>
+            <Nav />
+            <Tasks task={task} />
+          </div>
+        </MuiThemeProvider>
+      )
   }
 
 
