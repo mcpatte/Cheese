@@ -4,16 +4,19 @@ export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const POST_TASK = 'POST_TASK'
 
 export function requestTasks(userID) {
-  return {
-    type: REQUEST_TASKS,
-    userID
+  return dispatch => {
+    dispatch(requestTasks())
+    return fetch('/tasks')
+      .then(response => response.json())
+      .then(json => dispatch(receiveTasks(json)))
   }
 }
 
-export function receivePosts(data) {
+export function receiveTasks(json) {
   return {
     type: RECEIVE_POSTS,
-    data
+    data: json.data.children.map(child => child.data),
+    receivedAt: Date.now()
   }
 }
 
@@ -24,11 +27,11 @@ export function postTask() {
 }
 
 
-function fetchTasks() {
-  return dispatch => {
-    dispatch(requestTasks())
-    return fetch('/tasks')
-      .then(response => response.json())
-      .then(json => dispatch(receivePosts(json)))
-  }
-}
+
+
+//requestTasks
+
+
+
+//receiveTasks
+//postTask
