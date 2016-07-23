@@ -10,9 +10,9 @@ class Tasks extends React.Component {
         dueDate: '10/10/10',
         category: 'Front-End',
         points: 20,
-        notes: 'create webpack config file',
+        notes: 'creatasdfonfig file',
         owner: 'Heather',
-        creator: 'Someone else',
+        creator: 'sdf else',
         comments: [
           {
             user: 'Commenter1',
@@ -24,7 +24,26 @@ class Tasks extends React.Component {
           }
         ]
       },
-
+      {
+        title: 'To Do',
+        status: 'To Do',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create sadf config file',
+        owner: 'dfd',
+        creator: 'sdf else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
       {
         title: 'To Do',
         status: 'To Do',
@@ -46,6 +65,106 @@ class Tasks extends React.Component {
         ]
       },
 
+      {
+        title: 'In Progress',
+        status: 'In Progress',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'In Progress',
+        status: 'In Progress',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'In Progress',
+        status: 'In Progress',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'In Progress',
+        status: 'In Progress',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'In Progress',
+        status: 'In Progress',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
       {
         title: 'In Progress',
         status: 'In Progress',
@@ -109,6 +228,106 @@ class Tasks extends React.Component {
         ]
       },
 
+      {
+        title: 'Completed',
+        status: 'Completed',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'Completed',
+        status: 'Completed',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'Completed',
+        status: 'Completed',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'Completed',
+        status: 'Completed',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
+      {
+        title: 'Completed',
+        status: 'Completed',
+        dueDate: '10/10/10',
+        category: 'Front-End',
+        points: 20,
+        notes: 'create webpack config file',
+        owner: 'Heather',
+        creator: 'Someone else',
+        comments: [
+          {
+            user: 'Commenter1',
+            comment: 'Cool'
+          },
+          {
+            user: 'Commenter2',
+            comment: 'Cool'
+          }
+        ]
+      },
       {
         title: 'Completed',
         status: 'Completed',
