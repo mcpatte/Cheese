@@ -3,28 +3,17 @@ import Chip from 'material-ui/Chip';
 import Checkbox from 'material-ui/Checkbox';
 
 const TaskInfo = ({ title, status, dueDate, category, points }) => {
-  const styles = {
-    chip: {
-      margin: 4,
-      color: "white"
-    }
-  };
-
   return (
     <div>
-      <div className="due-date">
-        Due Date: {dueDate}
+      <div className="date-status-container">
+        <p className="due-date">Due: {dueDate}</p>
+        <p className="status">{status}</p>
       </div>
-      <div className="task-title">
-        <Checkbox className="checkbox" label={title} />
-      </div>
-      <div className="chips">
-        <a className="chip">
-          {category}
-        </a>
-        <a className="chip">
-          {points} points
-        </a>
+      <p className="task-title">Set up front end</p>
+      <div className="cat-pts-container">
+        <p className="category">{category}</p>
+        <p>&#9679;</p>
+        <p className="points">{points} points</p>
       </div>
     </div>
   );

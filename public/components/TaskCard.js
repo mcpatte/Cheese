@@ -13,7 +13,6 @@ const muiTheme = getMuiTheme({
   palette: {
     textColor: grey800,
     borderColor: grey400,
-    accent1Color: blueGrey500
   }
 });
 
@@ -21,21 +20,16 @@ const muiTheme = getMuiTheme({
 class TaskCard extends React.Component {
   render() {
     const {task} = this.props;
-    const cardContents = <div>
-                          <TaskInfo
-                            title={task.title}
-                            status={task.status}
-                            dueDate={task.dueDate}
-                            category={task.category}
-                            points={task.points} />
-                          <TaskComments comments={task.comments}/>
-                        </div>;
+
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
-        <Paper className="task-card-container"
-          zDepth={1}
-          children={cardContents} />
-      </MuiThemeProvider>
+      <div className="task-card-container">
+        <TaskInfo
+          title={task.title}
+          status={task.status}
+          dueDate={task.dueDate}
+          category={task.category}
+          points={task.points} />
+      </div>
     );
   }
 }
