@@ -20,7 +20,7 @@ var server = app.listen(process.env.PORT || 3000, function() {
 
 //SERVE UP STATIC INDEX.HTML
 app.get('/', function(req, res) {
-  res.sendFile(path.join('../build' , 'index.html'))
+  res.sendFile('../build/index.html')
 });
 
 //ERROR HANDLING
