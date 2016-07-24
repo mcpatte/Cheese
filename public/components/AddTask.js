@@ -19,16 +19,11 @@ class Form extends React.Component {
   render() {
     return (
       <Fieldset formValue={this.state.formValue}>
-        <Field select="firstName" label="First name" />
+        <Field select="taskName" label="First name" />
         <Field select="lastName" label="Last name" />
       </Fieldset>
     )
   }
 }
 
-import {render} from 'react-dom'
-
-// render(
-//   <Form value={{firstName: 'Michael', lastName: 'Jackson'}} />,
-//   document.getElementById('form')
-// )
+// export default Form
