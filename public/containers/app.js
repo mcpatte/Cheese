@@ -1,18 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import { fetchTasks } from '../actions'
-
+import { bluegrey500 } from 'material-ui/styles/colors';
 import Tasks from '../components/Tasks.js';
-<<<<<<< 2e467290aea53b00165da3c03007ba32b0b80d7e
-import Navbar from '../components/Navbar.js';
-=======
 import Nav from '../components/Navbar.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import * as Spacing from 'material-ui/styles/spacing';
+
 //socketio stuff
->>>>>>> Feat-Nav_Bar_Renders
 
 
 class App extends Component {
@@ -51,21 +49,25 @@ class App extends Component {
   }
 
 
+
   render() {
+    const muiTheme = getMuiTheme({
+      palette: {
+        primary1Color:"blueGrey500"
+      },
+      position:{
 
-
-
+      }
+  });
     return (
-        <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+        <MuiThemeProvider muiTheme={muiTheme}>
           <div>
             <Nav />
             <Tasks task={task} />
           </div>
         </MuiThemeProvider>
-      )
+      );
   }
-
-
 }
 
 
