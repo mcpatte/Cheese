@@ -1,5 +1,6 @@
 import React from 'react';
 import TaskCard from './TaskCard';
+import AddTask from './AddTask';
 
 const TaskStatusColumn = ({tasks, columnName}) => {
   return (
