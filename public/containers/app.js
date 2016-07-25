@@ -56,7 +56,6 @@ class App extends Component {
         primary1Color:"blueGrey500"
       },
       position:{
-
       }
   });
     return (

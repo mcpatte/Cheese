@@ -72,6 +72,8 @@ p {
 .task-card-container {
   background-color: #fff;
   /*box-shadow: 1px 1px 5px #E4E1E1;*/
+  position: relative;
+  top: 18px;
   width: 70%;
   margin: 4% auto;
   padding: 3% 5%;
@@ -83,6 +85,8 @@ p {
   text-align: center;
   font-size: 20px;
   font-weight: 600;
+  position: relative;
+  top: 18px;
 }
 
 .date-status-container {
@@ -152,6 +156,7 @@ p {
 .form{
   test-align: center;
 }
+
 /*.app {
   .brand {
     position: absolute;
