@@ -149,7 +149,9 @@ p {
   height: 50px;
 }
 
-
+.form{
+  test-align: center;
+}
 /*.app {
   .brand {
     position: absolute;
