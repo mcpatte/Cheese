@@ -18,15 +18,13 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 
 
 injectTapEventPlugin();
+//TODO: Split all of this up!
 
 const styles = {
   width: '40%',
   maxWidth: 'none',
 };
 
-const textStyles = {
-
-};
 
 
 class Nav extends React.Component {
@@ -37,33 +35,25 @@ class Nav extends React.Component {
   };
 
   render(){
-  const handleChange = (event, index, value) => this.setState({value});
 
-  const GetDate = () => (
-    <div>
-      <DatePicker hintText="Due date" mode="landscape" />
-    </div>
-  );
+    const handleChange = (event, index, value) => this.setState({value});
+    //TODO: pass from data
+    const handleSubmit = () => {
+      console.log("Hey you submitted the form!");
+      this.setState({open: false})
+      };
 
-  const GetText = () => (
-    <div>
-      <TextField hintText="Task Name"/><br />
-    </div>
-  )
-  const handleSubmit = () => {
-    console.log("Hey you submitted the form!");
+    const handleOpen = () => {
+      console.log("open")
+      this.setState({open: true});
     };
 
-  const handleOpen = () => {
-    console.log("hey")
-    this.setState({open: true});
-  };
+    const handleClose = () => {
+      console.log("close")
+      this.setState({open: false});
+    };
 
-  const handleClose = () => {
-    console.log("close")
-    this.setState({open: false});
-  };
-       const actions = [
+    const actions = [
       <FlatButton
         label="Cancel"
         primary={true}
@@ -72,8 +62,7 @@ class Nav extends React.Component {
       <FlatButton
         label="Submit"
         primary={true}
-        keyboardFocused={true}
-        onTouchTap={handleClose}
+        onTouchTap={handleSubmit}
       />,
     ];
 
@@ -91,21 +80,21 @@ class Nav extends React.Component {
           actions={actions}
           modal={false}
           open={this.state.open}
-          onRequestClose={this.handleClose}
+          onRequestClose={handleClose}
           contentStyle={styles}
         >
-          <form className= 'form'>
+          <form id="myForm" className='form' onSubmit={handleSubmit}>
             Task Name:<br/>
             <TextField hintText="Task name"/><br />
             Due date:<br/>
-            <DatePicker hintText="Due date" mode="landscape" />
-            Points:<br/>
-            <TextField hintText="Points"/><br />
+            <DatePicker  hintText="Due date" mode="landscape" />
             Category:<br/>
+            <TextField hintText="Category"/><br />
+            Status:<br/>
               <div>
                 <DropDownMenu
                     value={this.state.value}
-                    onChange={this.handleChange}
+                    onChange={handleChange}
                     style={styles.customWidth}
                     autoWidth={false}
                     >

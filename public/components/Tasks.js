@@ -9,20 +9,8 @@ class Tasks extends React.Component {
         status: 'To Do',
         dueDate: '10/10/10',
         category: 'Front-End',
-        points: 20,
         notes: 'creatasdfonfig file',
         owner: 'Heather',
-        creator: 'sdf else',
-        comments: [
-          {
-            user: 'Commenter1',
-            comment: 'Cool'
-          },
-          {
-            user: 'Commenter2',
-            comment: 'Cool'
-          }
-        ]
       },
       {
         title: 'To Do',
