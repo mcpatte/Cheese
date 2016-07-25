@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require('path');
 // var OAuthServer = require("express-oauth-server");
 var db = require('./db/db.js');
 
@@ -7,7 +8,7 @@ var app = express();
 
 // var oauth = new oauthServer({ model: {} });
 // var io = require("socket.io")(app);
-// app.use(express.static(__dirname + '/build'));
+app.use(express.static(path.join(__dirname ,  '../build')));
 // app.use(oauth.authenticate());
 app.use(bodyParser.json());
 
@@ -15,6 +16,11 @@ app.use(bodyParser.json());
 var server = app.listen(process.env.PORT || 3000, function() {
 	var port = server.address().port;
 	console.log("App now running on port " + port);
+});
+
+//SERVE UP STATIC INDEX.HTML
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
 });
 
 //ERROR HANDLING

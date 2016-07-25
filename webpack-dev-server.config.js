@@ -9,7 +9,7 @@ const config = {
   entry: [
     'webpack/hot/dev-server',
     'webpack/hot/only-dev-server',
-    path.join(__dirname, 'build/app.js'),
+    path.join(__dirname, 'public/index.js'),
   ],
   // Server Configuration options
   devServer: {
